@@ -33,7 +33,7 @@ jobs:
           output_location: "build" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         env:
-          SIGN_UP_SIGN_IN_URL: ${{ secrets.SIGN_UP_SIGN_IN_URL }
+          SIGN_UP_SIGN_IN_URL: ${{ secrets.SIGN_UP_SIGN_IN_URL }}
           POLICY_NAME: ${{ secrets.POLICY_NAME }}
           CLIENT_ID : ${{ secrets.CLIENT_ID }}
 
