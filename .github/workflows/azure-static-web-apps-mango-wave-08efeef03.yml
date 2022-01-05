@@ -29,7 +29,7 @@ jobs:
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
-          app_build_command: 'echo $SIGN_UP_SIGN_IN_URL | sed -i -e "s/TENANTNAME/$SIGN_UP_SIGN_IN_URL}/g; s/{POLICY_NAME}/$POLICY_NAME/g; s/{CLIENT_ID}/CLIENT_ID/g;" ./src/authconfig.js | cat ./src/authconfig.js | npm run build'          
+          app_build_command: 'echo $SIGN_UP_SIGN_IN_URL | sed -i -e ''s/TENANTNAME/$SIGN_UP_SIGN_IN_URL}/g; s/{POLICY_NAME}/$POLICY_NAME/g; s/{CLIENT_ID}/CLIENT_ID/g;'' ./src/authconfig.js | cat ./src/authconfig.js | npm run build'          
           output_location: "build" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         env:
