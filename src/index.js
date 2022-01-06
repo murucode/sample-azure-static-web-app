@@ -5,13 +5,14 @@ import App from './App';
 import Calc from './Calc';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
-import { msalConfig } from "./authConfig"
+import { msalConfig } from "./authconfig"
 import { PublicClientApplication } from "@azure/msal-browser";
 
 export const msalInstance = new PublicClientApplication(msalConfig);
 ReactDOM.render(
   <BrowserRouter>
     <App msalInstance={msalInstance} />
+    {/* <Welcome name="muru" /> */}
   </BrowserRouter>,
   document.getElementById('root')
 );

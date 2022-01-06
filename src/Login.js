@@ -1,6 +1,6 @@
 import  { React, useState } from "react";
 import {useMsal, AuthenticatedTemplate} from "@azure/msal-react"
-import { loginRequest, b2cPolicies } from "./authConfig";
+import { loginRequest, b2cPolicies } from "./authconfig";
 import { render } from "@testing-library/react";
 
 
