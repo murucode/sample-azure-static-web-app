@@ -1,24 +1,25 @@
-import  { React, useState } from "react";
-import {useMsal, AuthenticatedTemplate} from "@azure/msal-react"
+import { React, useState } from "react";
+import { useMsal, AuthenticatedTemplate, UnauthenticatedTemplate } from "@azure/msal-react"
 import { loginRequest, b2cPolicies } from "./authconfig";
 import { render } from "@testing-library/react";
 
 
 
-function Login(){
+function Login() {
 
     const { instance } = useMsal();
-    
+
     render()
     {
-        return(
+        return (
             <div>
                 <AuthenticatedTemplate>
-                <IdTokenContent/>
+                    <IdTokenContent />
                 </AuthenticatedTemplate>
-
-                <button onClick={() => instance.loginPopup(loginRequest)} > Sign in</button>
-                </div>
+                <UnauthenticatedTemplate>
+                    <button onClick={() => instance.loginPopup(loginRequest)} > Sign in</button>
+                </UnauthenticatedTemplate>
+            </div>
         )
     }
 }
@@ -40,7 +41,7 @@ const IdTokenContent = () => {
 
     return (
         <>
-        
+
             <h5 className="card-title">Welcome1 {accounts[0].environment}</h5>
             {idTokenClaims ?
                 <IdTokenClaims idTokenClaims={idTokenClaims} />
@@ -67,8 +68,8 @@ export const IdTokenClaims = (props) => {
 //         username:'',
 //         pwd:''
 //     }
-    
-    
+
+
 
 //     OnTextChange = (e) =>
 //     {
@@ -84,16 +85,16 @@ export const IdTokenClaims = (props) => {
 //         console.log("mur");
 //         console.log(this.state.pwd);
 //         console.log(this.state.username);
-       
+
 
 //     }
-    
+
 //     render(){
 //         return(
 //             <div>
 //                 <div>
 //                 Hello Login</div>
-                
+
 //                 <input name="username" type="text" placeholder="User name" onChange={this.OnTextChange}></input>
 //                 <input name="pwd" placeholder="Password" type="password" onChange={this.OnTextChange}></input>
 //                 <button name="submit" onClick={() => instance.loginPopup(loginRequest)}>Submit</button>
