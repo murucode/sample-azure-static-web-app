@@ -35,7 +35,17 @@ jobs:
         env:
           SIGN_UP_SIGN_IN_URL: ${{ secrets.SIGN_UP_SIGN_IN_URL }}
           POLICY_NAME: ${{ secrets.POLICY_NAME }}
-          CLIENT_ID : ${{ secrets.CLIENT_ID }}
+          CLIENT_ID : ${{ secrets.CLIENT_ID }}\
+      - name: Archive production logs
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: logs
+          retention-days: 1
+          path: |
+            /home/runner/.npm/_logs/*
+            /github/home/runner/.npm/_logs/*
+            /github/home/.npm/_logs/*
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
