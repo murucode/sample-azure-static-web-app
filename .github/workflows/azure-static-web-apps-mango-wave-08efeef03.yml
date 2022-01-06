@@ -43,8 +43,6 @@ jobs:
           name: logs
           retention-days: 1
           path: |
-            /home/runner/.npm/_logs/*
-            /github/home/runner/.npm/_logs/*
             /github/home/.npm/_logs/*
 
   close_pull_request_job:
