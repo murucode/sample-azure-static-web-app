@@ -1,3 +1,5 @@
+[![Azure Static Web Apps CI/CD](https://github.com/murucode/sample-azure-static-web-app/actions/workflows/azure-static-web-apps-mango-wave-08efeef03.yml/badge.svg)](https://github.com/murucode/sample-azure-static-web-app/actions/workflows/azure-static-web-apps-mango-wave-08efeef03.yml)
+
 # Getting Started with azure static app with azure b2c
 
 It's a sample react project which uses azure b2c login.
