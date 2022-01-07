@@ -20,7 +20,7 @@ jobs:
           submodules: true
       - name: my script
         run: |       
-          sed -i "s/TENANTNAME/$TENANTNAME/g; s/{POLICY_NAME}/$POLICY_NAME/g; s/{CLIENT_ID}/$CLIENT_ID/g;" ./src/authconfig.js
+          sed -i "s/{TENANTNAME}/$TENANTNAME/g; s/{POLICY_NAME}/$POLICY_NAME/g; s/{CLIENT_ID}/$CLIENT_ID/g;" ./src/authconfig.js
           cat ./src/authconfig.js
         env: 
           TENANTNAME: ${{ secrets.SIGN_UP_SIGN_IN_URL }}
