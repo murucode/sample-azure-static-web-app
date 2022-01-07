@@ -18,16 +18,16 @@ export const b2cPolicies = {
     },
     authorities: {
         signUpSignIn: {
-            authority: "https://TENANTNAME.b2clogin.com/TENANTNAME.onmicrosoft.com/{POLICY_NAME}",
+            authority: "https://{TENANTNAME}.b2clogin.com/{TENANTNAME}.onmicrosoft.com/{POLICY_NAME}",
         },
         forgotPassword: {
-            authority: "https://TENANTNAME.b2clogin.com/TENANTNAME.onmicrosoft.com/{POLICY_NAME}",
+            authority: "https://{TENANTNAME}.b2clogin.com/{TENANTNAME}.onmicrosoft.com/{POLICY_NAME}",
         },
         editProfile: {
-            authority: "https://TENANTNAME.b2clogin.com/TENANTNAME.onmicrosoft.com/{POLICY_NAME}"
+            authority: "https://{TENANTNAME}.b2clogin.com/{TENANTNAME}.onmicrosoft.com/{POLICY_NAME}"
         }
     },
-    authorityDomain: "murutestb2c.b2clogin.com"
+    authorityDomain: "{TENANTNAME}.b2clogin.com"
 }
 
 /**
