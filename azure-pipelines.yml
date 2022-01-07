@@ -24,4 +24,5 @@ steps:
     app_location: '/src'
     api_location: 'api'
     output_location: 'public'
+    cwd: '$(System.DefaultWorkingDirectory)/myapp
     azure_static_web_apps_api_token: $(deployment_token)
