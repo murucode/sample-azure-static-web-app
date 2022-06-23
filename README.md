@@ -34,4 +34,4 @@ Auth configuration:
     It's a utility used to run git action workflow in local to identify the build issues in local itself.
     <https://github.com/nektos/act>
     We can have my.env and my.secret files to pass environment variables.
-    This will use docker to run the build locally. 
+    This will use docker to run the build locally..
